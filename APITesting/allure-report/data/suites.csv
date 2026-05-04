@@ -1,3 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","2756","GET /api/site/summary returns modern smoke-check payload","Site Summary API","2026-05-01","passed","2026-05-01","","","",""
+"","1415","GET /wp-json/ returns WordPress API metadata","REST API index","2026-05-04","passed","2026-05-04","","","",""
+"","2660","GET /api/site/summary returns modern smoke-check payload","Site Summary API","2026-05-01","passed","2026-05-01","","","",""
 "","14","GET /health returns service metadata","Health API","2026-05-01","passed","2026-05-01","","","",""
+"","1077","GET /wp-json/wp/v2/pages?slug=about returns the About page","Pages API","2026-05-04","passed","2026-05-04","","","",""
