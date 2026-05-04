@@ -1,13 +1,3 @@
-/**
- * preserve-allure-history.js
- *
- * Run this BEFORE `allure generate` to carry history from the previous
- * report into the new allure-results folder. This enables Allure's
- * trend charts and history diff features.
- *
- * Usage:  node scripts/preserve-allure-history.js
- */
-
 const fs   = require('fs');
 const path = require('path');
 

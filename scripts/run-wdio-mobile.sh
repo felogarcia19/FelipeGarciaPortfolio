@@ -1,7 +1,4 @@
 #!/bin/bash
-# Script to start Android emulator and run WebdriverIO tests
-# Usage: ./scripts/run-wdio-mobile.sh
-# or (Windows): powershell -ExecutionPolicy Bypass -File scripts/run-wdio-mobile.ps1
 
 set -e
 

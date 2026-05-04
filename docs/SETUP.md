@@ -153,10 +153,10 @@ code --install-extension rangav.vscode-thunder-client
 
 ```bash
 # Clone the repository
-git clone https://github.com/felogarcia19/PlayWrightExampleE2E.git
+git clone https://github.com/felogarcia19/FelipeGarciaPortfolio.git Playwright
 
 # Navigate into the directory
-cd PlayWrightExampleE2E
+cd Playwright
 
 # View available folders
 ls -la

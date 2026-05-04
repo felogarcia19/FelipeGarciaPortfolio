@@ -113,7 +113,7 @@ test('contact info is displayed', async ({ contactPage }) => {
 ### Clone & Install
 
 ```bash
-git clone https://github.com/felogarcia19/PlayWrightExampleE2E.git
+git clone https://github.com/felogarcia19/FelipeGarciaPortfolio.git Playwright
 cd Playwright
 npm install
 npx playwright install
@@ -151,7 +151,7 @@ npm run wdio:test
 #### 1. Clone the repository
 
 ```bash
-git clone https://github.com/felogarcia19/PlayWrightExampleE2E.git
+git clone https://github.com/felogarcia19/FelipeGarciaPortfolio.git Playwright
 cd Playwright
 ```
 
@@ -196,7 +196,7 @@ npm run test:report      # Show last test report
 #### 1. Clone repository (same as Playwright)
 
 ```bash
-git clone https://github.com/felogarcia19/PlayWrightExampleE2E.git
+git clone https://github.com/felogarcia19/FelipeGarciaPortfolio.git Playwright
 cd Playwright
 npm install
 ```

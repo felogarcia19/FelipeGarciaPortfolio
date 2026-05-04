@@ -2,7 +2,6 @@ import { Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class HomePage extends BasePage {
-  // ── Section headings ──────────────────────────────────────────────────────
   get audioEngineeringHeading(): Locator {
     return this.heading('Audio Engineering');
   }

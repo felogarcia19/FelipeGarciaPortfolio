@@ -6,15 +6,15 @@ class PreludeServicesPage extends BasePage {
   }
 
   get audioServiceSection() {
-    return $('[class*="audio" i], a[href*="audio" i]');
+    return $('//h3[contains(text(), "Audio")] | //h2[contains(text(), "Audio")] | //*[contains(@class, "audio")]');
   }
 
   get electronicsServiceSection() {
-    return $('[class*="electronics" i], a[href*="electronics" i]');
+    return $('//h3[contains(text(), "Electronics")] | //h2[contains(text(), "Electronics")] | //*[contains(@class, "electronics")]');
   }
 
   get softwareServiceSection() {
-    return $('[class*="software" i], a[href*="software" i]');
+    return $('//h3[contains(text(), "Software")] | //h2[contains(text(), "Software")] | //*[contains(@class, "software")]');
   }
 
   async countServiceCards() {
@@ -42,7 +42,7 @@ class PreludeServicesPage extends BasePage {
     if (!section) {
       throw new Error(`Unknown service section: ${sectionName}`);
     }
-
+    await section.scrollIntoView();
     await expect(section).toBeDisplayed();
   }
 }

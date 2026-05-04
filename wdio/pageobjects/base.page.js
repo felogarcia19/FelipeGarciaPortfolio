@@ -1,4 +1,8 @@
 class BasePage {
+  get mobileMenuToggle() {
+    return $('button[aria-label*="menu" i], .menu-toggle, .navbar-toggler, .hamburger');
+  }
+
   async open(path = '/') {
     await browser.url(path);
   }
@@ -32,10 +36,20 @@ class BasePage {
           await browser.pause(400);
           break;
         } catch {
-          // Ignore non-interactable popup candidates.
         }
       }
     }
+  }
+
+  async openMobileMenuIfAvailable() {
+    if (await this.mobileMenuToggle.isExisting()) {
+      await this.mobileMenuToggle.waitForDisplayed({ timeout: 10000 });
+      await this.mobileMenuToggle.click();
+      await browser.pause(500);
+      return true;
+    }
+
+    return false;
   }
 }
 

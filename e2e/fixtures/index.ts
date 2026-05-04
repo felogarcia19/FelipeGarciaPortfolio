@@ -1,15 +1,3 @@
-/**
- * Custom Playwright fixtures.
- *
- * Every page-object class is registered here so tests receive them already
- * instantiated via destructuring — no `new XxxPage(page)` or `beforeEach`
- * boilerplate needed inside spec files.
- *
- * Usage in a spec file:
- *   import { test, expect } from '../fixtures';
- *   test('...', async ({ aboutPage }) => { ... });
- */
-
 import { test as base, expect } from '@playwright/test';
 
 import { NavigationPage } from '../pages/NavigationPage';
