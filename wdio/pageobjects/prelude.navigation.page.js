@@ -26,7 +26,6 @@ class PreludeNavigationPage extends BasePage {
   }
 
   async navigateToMenu(menuName) {
-    // On mobile, need to open the menu first
     await this.openMobileMenuIfAvailable();
 
     const linkMap = {

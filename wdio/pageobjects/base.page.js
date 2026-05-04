@@ -36,7 +36,6 @@ class BasePage {
           await browser.pause(400);
           break;
         } catch {
-          // Ignore non-interactable popup candidates.
         }
       }
     }
@@ -46,7 +45,7 @@ class BasePage {
     if (await this.mobileMenuToggle.isExisting()) {
       await this.mobileMenuToggle.waitForDisplayed({ timeout: 10000 });
       await this.mobileMenuToggle.click();
-      await browser.pause(500); // Wait for menu animation
+      await browser.pause(500);
       return true;
     }
 

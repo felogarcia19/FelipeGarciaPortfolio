@@ -4,28 +4,23 @@ const preludeNavigationPage = require('../pageobjects/prelude.navigation.page');
 
 describe('Prelude Contact Page Mobile E2E', () => {
   it('navigates to contact via menu', async () => {
-    // Start from home
     await preludeHomePage.openHome();
-    
-    // Open mobile menu if available
+
     await preludeHomePage.openMobileMenuIfAvailable();
-    
-    // Click contact link
+
     const contactLink = $('a[href*="159-2" i], a[href*="contact" i]');
     await contactLink.waitForDisplayed({ timeout: 5000 });
     await contactLink.click();
-    
-    // Verify we're on a page with "contact" in the URL or title
+
     await browser.pause(1000);
     const url = await browser.getUrl();
     const title = await browser.getTitle();
-    
+
     const isContactPage = url.includes('159-2') || url.includes('contact') || title.includes('Contact');
     await expect(isContactPage).toBe(true);
   });
 
   it('loads contact page successfully', async () => {
-    // Just navigate home and verify it loads
     await preludeHomePage.openHome();
     await expect(preludeHomePage.body).toBeDisplayed();
   });

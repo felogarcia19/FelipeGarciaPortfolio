@@ -2,7 +2,6 @@ import { Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 export class NavigationPage extends BasePage {
-  /** Return a nav link locator by its visible label */
   menuLink(name: string): Locator {
     return this.nav.getByRole('link', { name });
   }

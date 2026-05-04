@@ -1,14 +1,9 @@
-# Script to start Android emulator and run WebdriverIO tests
-# Usage (Windows): powershell -ExecutionPolicy Bypass -File scripts/run-wdio-mobile.ps1
-
 param(
     [string]$AvdName = "Prelude_Pixel_7",
     [int]$BootWaitSeconds = 15
 )
 
 $ErrorActionPreference = "Stop"
-
-# Get ANDROID_HOME from environment or use default
 $AndroidHome = $env:ANDROID_HOME
 if (-not $AndroidHome) {
     $AndroidHome = "$env:USERPROFILE\AppData\Local\Android\Sdk"
