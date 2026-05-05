@@ -1,0 +1,18 @@
+{
+  "name": "musicmart-stack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MusicMart full-stack demo with React, Node.js, and Python",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix api",
+    "dev": "concurrently -n frontend,api,backend -c blue,green,magenta \"npm run dev --prefix frontend\" \"npm run dev --prefix api\" \"node scripts/run-backend.mjs\"",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:api": "npm run dev --prefix api",
+    "dev:backend": "node scripts/run-backend.mjs",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run start --prefix api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
